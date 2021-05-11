@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {createSwitchNavigator, createAppContainer} from "react-navigation"
+import {createBottomTabNavigator} from "react-navigation-tabs"
+import {createAppContainer} from "react-navigation"
 import WriteScreen from "./Screens/writescreen"
 import ReadScreen from "./Screens/readscreen"
 
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
   },
 });
 
-var TabNavigator = createSwitchNavigator({
+var TabNavigator = createBottomTabNavigator({
   WriteScreen : WriteScreen ,ReadScreen: ReadScreen
   
 })
